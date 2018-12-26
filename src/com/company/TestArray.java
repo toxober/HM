@@ -11,15 +11,14 @@ public class TestArray {
         int guests[] = new int[10];
         Scanner diskScanner = new Scanner(new File("D:/GuestList.txt"));
 
-        for(int roomNum = 0; roomNum < guests.length; roomNum++) {
+        for(int roomNum = 0; roomNum < 10; roomNum++) {
             guests[roomNum] = diskScanner.nextInt();
         }
-        out.println("room\tnubmer");
-        for(int numGuests : guests){ //Альтернативная запись цикла: Тип_переменной имя_переменной : Диапазон_значений
-            int roomNum=0;
-            out.print(roomNum++);
-            out.print("\t");
-            out.println(numGuests);
+        out.println("комната\tколичество");
+        for(int roomNum = 0; roomNum < 10; roomNum++){
+            out.println(roomNum);
+            out.println("\t");
+            out.println(guests[roomNum]);
         }
         diskScanner.close();
     }
