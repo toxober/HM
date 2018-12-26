@@ -3,24 +3,46 @@ package com.company;
 import static java.lang.System.out;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.util.Scanner;
 
 
 public class TestArray {
     public static void main(String args[]) throws IOException {
         byte guests[] = new byte[10];
+        byte roomNum;
         Scanner diskScanner = new Scanner(new File("D:/GuestList.txt"));
 
-        for(byte roomNum = 0; roomNum < 10; roomNum++) {
+        for(roomNum = 0; roomNum < 10; roomNum++) {
             guests[roomNum] = diskScanner.nextByte();
-        }
+        }diskScanner.close();
         out.println("room\tnumbers");
-        for(int numGuest : guests){ //Альтернативный способ записи цикла: Тип_переменной Имя_переменной : Диапазон_значений (указал что roomNum = 0 и при выводе добавить ++) И ещё, при использовании "расширенного" цикла for в каждой итерации в переменной цикла numGuest сохраняется копия одного из значений диапазона guests и переменная numGuest не указывает ни на диапазон, ни на его текущее значение.
-            int roomNum= 0;
-            out.print(roomNum++);
+
+        for(roomNum = 0; roomNum<10; roomNum++) {
+            out.print(roomNum);
             out.print("\t");
-            out.println(numGuest);
+            out.println(guests[roomNum]);
         }
-        diskScanner.close();
-    }
+        roomNum=0;
+            while (roomNum < 10 && guests[roomNum] != 0) {
+                roomNum++;
+            }
+            if (roomNum == 10){
+                out.println("Sorryamba, mest net.");
+            }else {
+                out.print("How many pizdykov poselyatsa ");
+                out.print(roomNum);
+                out.print("? ");
+                Scanner keyboard = new Scanner(System.in);
+                guests[roomNum] = keyboard.nextByte();
+                keyboard.close();
+                PrintStream listOut = new PrintStream("D:/GuestList.txt");
+                for (roomNum = 0; roomNum < 10; roomNum++) {
+                    listOut.print(guests[roomNum]);
+                    listOut.print(" ");
+                }
+                listOut.close();
+            }
+        }
 }
+
