@@ -16,8 +16,8 @@ public class TestArray {
         }
         out.println("комната\tколичество");
         for(int roomNum = 0; roomNum < 10; roomNum++){
-            out.println(roomNum);
-            out.println("\t");
+            out.print(roomNum);
+            out.print("\t");
             out.println(guests[roomNum]);
         }
         diskScanner.close();
