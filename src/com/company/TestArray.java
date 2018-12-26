@@ -15,7 +15,7 @@ public class TestArray {
             guests[roomNum] = diskScanner.nextInt();
         }
         out.println("room\tnumbers");
-        for(int numGuest : guests){
+        for(int numGuest : guests){ //Альтернативный способ записи цикла: Тип_переменной Имя_переменной : Диапазон_значений (указал что roomNum = 0 и при выводе добавить ++)
             int roomNum= 0;
             out.print(roomNum++);
             out.print("\t");
