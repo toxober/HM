@@ -14,11 +14,12 @@ public class TestArray {
         for(int roomNum = 0; roomNum < 10; roomNum++) {
             guests[roomNum] = diskScanner.nextInt();
         }
-        out.println("комната\tколичество");
-        for(int roomNum = 0; roomNum < 10; roomNum++){
-            out.println(roomNum);
-            out.println("\t");
-            out.println(guests[roomNum]);
+        out.println("room\tnumbers");
+        for(int numGuest : guests){
+            int roomNum= 0;
+            out.print(roomNum++);
+            out.print("\t");
+            out.println(numGuest);
         }
         diskScanner.close();
     }
