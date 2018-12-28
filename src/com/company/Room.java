@@ -9,7 +9,7 @@ public class Room {
     private int guests;
     private double rate;
     private boolean smoking;
-    private static NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
+    private static final NumberFormat currency = NumberFormat.getCurrencyInstance(Locale.US);
 
     public void readRoom(Scanner diskScanner) {
         guests = diskScanner.nextInt();
@@ -19,9 +19,9 @@ public class Room {
 
     public void writeRoom() {
         out.print(guests);
-        out.print("/t");
+        out.print("\t");
         out.print(currency.format(rate));
-        out.print("/t/t");
+        out.print("\t\t");
         out.print(smoking ? "yes" : "no");
     }
 }
