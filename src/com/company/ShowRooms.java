@@ -17,7 +17,7 @@ public class ShowRooms {
         out.println("Room\tQuantity\tRate\t\t" + "For Smoker");
         for (int roomNum = 0; roomNum < 10; roomNum++){
             out.print(roomNum);
-            out.print("/t");
+            out.print("\t");
             rooms[roomNum].writeRoom();
         }
         diskScanner.close();

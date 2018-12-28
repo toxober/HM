@@ -22,6 +22,6 @@ public class Room {
         out.print("\t");
         out.print(currency.format(rate));
         out.print("\t\t");
-        out.print(smoking ? "yes" : "no");
+        out.println(smoking ? "yes" : "no");
     }
 }
