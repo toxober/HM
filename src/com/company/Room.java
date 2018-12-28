@@ -1,6 +1,5 @@
 package com.company;
 
-import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Scanner;
