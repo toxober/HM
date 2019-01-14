@@ -14,7 +14,7 @@ public class ShowRooms {
             rooms[roomNum] = new Room();
             rooms[roomNum].readRoom(diskScanner);
         }
-        out.println("Room\tQuantity\tRate\t\t" + "For Smoker");
+        out.println("R\tQ\tRate\t\t" + "For Smoker");
         for (int roomNum = 0; roomNum < 10; roomNum++){
             out.print(roomNum);
             out.print("\t");

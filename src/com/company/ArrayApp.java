@@ -26,7 +26,7 @@ public class ArrayApp {
             System.out.print(arr[j] + " ");
         System.out.println("");
 
-        searchKey = 77;                      //удаление элемента с ключом  77
+        searchKey = 77;                //удаление элемента с ключом  77
         for (j = 0; j < nElems; j++) { //поиск удаляемого элемента
             if (arr[j] == searchKey)
                 break;
